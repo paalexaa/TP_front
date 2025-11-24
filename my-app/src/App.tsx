@@ -1,12 +1,16 @@
-import './App.css'
-import ExercisePage from './pages/exercisePage'
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./pages/mainPage";
+import ExercisePage from "./pages/exercisePage";
 
 function App() {
   return (
-    <>
-      <ExercisePage />
-    </>
-  )
+    <div className="min-h-screen flex items-center justify-center">
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/exercise" element={<ExercisePage />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
